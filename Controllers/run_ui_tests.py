@@ -16,6 +16,7 @@ class RunUITests(object):
 		# Based on browser run corresponding UI tests
 		self.browser_name = browser_name
 		if browser_name == "phantomjs":
+			# neccesary if we have to access sites with https://
 			with PhantomJS(ssl=True) as phantomjs:
 				self.run_ui_tests_with_browser(phantomjs)
 		elif browser_name == "firefox":
