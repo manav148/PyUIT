@@ -9,6 +9,6 @@ Requirements:
 
 <b>Selenium:</b> pip install selenium
 
-<b>Usage:</b> cat rules.json | python pyuit.py
+<b>Usage:</b> ```cat rules.json | python pyuit.py```
 
 Where rules.json is a json file (See rules.json for explanation)
