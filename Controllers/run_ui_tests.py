@@ -41,6 +41,7 @@ class RunUITests(object):
                         for field, value in page['fields'].iteritems():
                             fillform.set_element_by_name(field, value)
                         fillform.submit_form()
+                    print "Test Passed " if page_helpers.check_success_status(page['success_string']) else "Test Failed"
                 except Exception, e:
                     # Take screen shot and email in case of failure
                     page_helpers.take_screen_shot_and_mail()

@@ -14,7 +14,7 @@
             "fields": {
                 "q": "selenium" 
             }, 
-            "success": "automation"
+            "success_string": "automation"
         }
     ]
 ]
