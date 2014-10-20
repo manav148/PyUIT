@@ -1,5 +1,5 @@
-rules.json explained:
-=====================
+rules.json :
+============
 
 ```json
 [ -> UI Tests begin (List of Rules)
