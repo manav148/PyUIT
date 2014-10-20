@@ -1,5 +1,5 @@
 from BrowserTools import  FillForm, PhantomJS, Firefox
-from Helpers import PageHelpers, ImportContacts, ImportContactsNew
+from Helpers import PageHelpers
 
 class RunUITests(object):
 	"""Parse Rules and Runs UI Tests"""
@@ -25,7 +25,6 @@ class RunUITests(object):
 	def run_ui_tests_with_browser(self, browser):
 		# Parse rules and run tests
 		for rule in self.rules:
-			# print "Rule : ", str(rule)
 			for page in rule:
 				try:
 					print page
