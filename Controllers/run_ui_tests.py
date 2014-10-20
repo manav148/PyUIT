@@ -30,13 +30,20 @@ class RunUITests(object):
 		page_helpers = PageHelpers(browser)
 		# Parse rules and run tests
 		for rule in self.rules:
-			try:
-				# Write tests using fillform class to submit forms (common)
-				# or visit links
-				pass
-			except Exception, e:
-				# Take screen shot and email in case of failure
-				page_helpers.take_screen_shot_and_mail()
-				raise e
+			# print "Rule : ", str(rule)
+			for page in rule:
+				try:
+					print page
+					browser.get_url(page['url'])
+					# For each form fill one form
+					fillform = FillForm(driver)
+					if page['fields']:
+						for field, value in page['fields'].iteritems():
+							fillform.set_element_by_name(field, value)
+						fillform.submit_form()
+				except Exception, e:
+					# Take screen shot and email in case of failure
+					page_helpers.take_screen_shot_and_mail()
+					raise e
 			# Purging cookies to start a new test
 			browser.purge_cookies()

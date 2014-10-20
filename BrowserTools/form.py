@@ -7,7 +7,7 @@ class Form(object):
 	
 	def __init__(self, driver):
 		self.driver = driver
-		self.wait_after_submission = 60
+		self.wait_after_submission = 10 #seconds
 		self.any_form_element = None
 	
 	def click_visible_button_on_page(self):
