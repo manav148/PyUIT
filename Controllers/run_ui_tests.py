@@ -23,35 +23,19 @@ class RunUITests(object):
 				self.run_ui_tests_with_browser(firefox)
 
 	def run_ui_tests_with_browser(self, browser):
+		# get driver from browser
+		driver = browser.get_web_driver()
+		# initiate page helpers class
+		page_helpers = PageHelpers(browser)
 		# Parse rules and run tests
 		for rule in self.rules:
-			for page in rule:
-				try:
-					print page
-					# If the url contains import initialize import module
-					if page['url'].find("import?p") >= 0:
-						import_contacts = ImportContactsNew(rules = page, browser = browser, result = self.result)
-						import_contacts.start_importing_contacts()
-					# proceed normal requests
-					else:
-						browser.get_url(page['url'])
-						driver = browser.get_web_driver()
-						# browser.get_page_source()
-						page_helpers = PageHelpers(browser)
-						# For each form fill one form
-						fillform = FillForm(driver)
-						if page['fields']:
-							for field, value in page['fields'].iteritems():
-								fillform.set_element_by_name(field, value)
-							fillform.submit_form()
-						# Check if the page contains the desired text
-						screen_shot = True if self.browser_name == "phantomjs" else False
-						page_helpers.check_for_result( url = page['url'], success_string = page['success'], result = self.result, screen_shot = screen_shot, update_redis = True)
-				except Exception, e:
-					if page_helpers:
-						page_helpers.take_screen_shot_and_mail(page['url'])
-					raise e
+			try:
+				# Write tests using fillform class to submit forms (common)
+				# or visit links
+				pass
+			except Exception, e:
+				# Take screen shot and email in case of failure
+				page_helpers.take_screen_shot_and_mail()
+				raise e
 			# Purging cookies to start a new test
-			print "\nPurging cookies\n"
 			browser.purge_cookies()
-		print "\nResult : \n"+ str(self.result)
