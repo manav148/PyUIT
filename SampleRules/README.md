@@ -1,13 +1,13 @@
 Rules Explained:
 ```
-[ // <b>Set of Rules</b>
-    [ // <b>Each Rule can have multiple test, Each test corresponds to a single url</b>
-        {// <b>Test</b>
+[ -> Set of Rules
+    [ -> Each Rule can have multiple test, Each test corresponds to a single url
+        {-> Test
             "url": "https://www.google.com/", 
-            "fields": { // <b>Fields to be filled in page </b>
+            "fields": { -> Fields to be filled in page 
                 "q": "I am lucky"
             }, 
-            "success_string": "lucky" // <b>The test is successful if we find this string in the final page</b>
+            "success_string": "lucky" -> The test is successful if we find this string in the final page
         }
     ], 
     [
