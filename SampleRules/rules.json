@@ -1,0 +1,22 @@
+[
+    [
+        {
+            "url": "http://sampleurl/login", 
+            "fields": {
+                "password": "pass", 
+                "email": "email+123456@gmail.com"
+            }, 
+            "success_string": "login successful"
+        }
+    ], 
+    [
+        {
+            "url": "http://sampleurl1/login", 
+            "fields": {
+                "password": "pass1", 
+                "email": "email2+123456@gmail.com"
+            }, 
+            "success": "login successful"
+        }
+    ]
+]
