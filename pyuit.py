@@ -16,9 +16,9 @@ while(True):
 		rules = json.loads(data)
 		test = RunUITests(rules)
 		# Run tests using phantomjs 
-		test.run_ui_tests("phantomjs")
+		# test.run_ui_tests("phantomjs")
 		# Run tests using firefox browser
-		# test.run_ui_tests("firefox")
+		test.run_ui_tests("firefox")
 		break		
 	except Exception, e:
 		# If phantomjs crashes it throws an exception containing string "ghostdriver" we retry

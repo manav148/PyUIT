@@ -1,22 +1,20 @@
 [
     [
         {
-            "url": "http://sampleurl/login", 
+            "url": "https://www.google.com/", 
             "fields": {
-                "password": "pass", 
-                "email": "email+123456@gmail.com"
+                "q": "I am lucky"
             }, 
-            "success_string": "login successful"
+            "success_string": "lucky"
         }
     ], 
     [
         {
-            "url": "http://sampleurl1/login", 
+            "url": "https://www.google.com/", 
             "fields": {
-                "password": "pass1", 
-                "email": "email2+123456@gmail.com"
+                "q": "selenium" 
             }, 
-            "success": "login successful"
+            "success": "automation"
         }
     ]
 ]
