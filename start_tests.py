@@ -20,7 +20,7 @@ while(True):
 		# test.run_ui_tests("firefox")
 		break		
 	except Exception, e:
-		# If phantomjs crashes it throws an exception containing string "ghostdriver" we restart
+		# If phantomjs crashes it throws an exception containing string "ghostdriver" we retry
 		if str(e).lower().find("ghostdriver") >= 0 and (retries <= max_retries_if_ghost_driver_fails):
 			time.sleep(3)
 			retries += 1
