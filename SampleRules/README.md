@@ -7,7 +7,7 @@ Rules Explained:
             "fields": { -> Fields to be filled in page 
                 "q": "I am lucky"
             }, 
-            "success_string": "lucky" -> The test is successful if we find this string in the final page
+            "success_string": "lucky" -> The test is successful if we find this string after filling and posting the form
         }
     ], 
     [
