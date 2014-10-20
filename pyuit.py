@@ -5,7 +5,8 @@ import sys, json
 import time
 
 retries = 0
-max_retries_if_ghost_driver_fails = 4
+max_retries_if_phantomjs_fails = 4
+sleep_before_retrying = 3 # seconds
 # Read rules as json from stdin and run UITests
 data = sys.stdin.read()
 
@@ -21,8 +22,8 @@ while(True):
 		break		
 	except Exception, e:
 		# If phantomjs crashes it throws an exception containing string "ghostdriver" we retry
-		if str(e).lower().find("ghostdriver") >= 0 and (retries <= max_retries_if_ghost_driver_fails):
-			time.sleep(3)
+		if str(e).lower().find("ghostdriver") >= 0 and (retries <= max_retries_if_phantomjs_fails):
+			time.sleep(sleep_before_retrying)
 			retries += 1
 			continue
 		raise e
