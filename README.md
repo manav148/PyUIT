@@ -11,4 +11,5 @@ Requirements:
 
 <b>Usage:</b> ```cat rules.json | python pyuit.py```
 
-Where rules.json is a json file (See SampleRules/rules.json for explanation)
+Where rules.json is an input json file which governs UITests
+(Checkout SampleRules/rules.json)
