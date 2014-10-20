@@ -1,6 +1,6 @@
 Rules Explained:
 
-```
+```json
 [ -> UI Tests begin (List of Rules)
     [ -> Each Rule can have multiple test, Each test corresponds to a single url
         { -> Each Test is dictionary of key value pairs
