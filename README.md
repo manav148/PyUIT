@@ -1,7 +1,7 @@
 PyUIT
 =====
 
-A UI Test Framework using Python, Selenium and Phantomjs/FireFox driver.
+A UI Test Framework using Python, Selenium and Phantomjs/FireFox driver.(alpha)
 
 Requirements:
 
