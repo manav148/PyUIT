@@ -15,6 +15,13 @@
                 "q": "selenium" 
             }, 
             "success_string": "automation"
+        },
+        {
+            "url": "https://www.google.com/", 
+            "fields": {
+                "q": "selenium" 
+            }, 
+            "success_string": "automation"
         }
     ]
 ]
