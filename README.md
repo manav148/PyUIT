@@ -1,4 +1,4 @@
 PyUIT
 =====
 
-A UI Test Library using Python, Selenium and phantomjs
+A UI Test Framework using Python, Selenium, Phantomjs/FireFox
