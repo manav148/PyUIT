@@ -7,7 +7,7 @@ Requirements:
 
 <b>Selenium:</b> ```pip install selenium``` 
 
-<b>Optional: (Install only if we don't have GUI installed on server.)</b>
+Optional: (Install only if we don't have GUI installed on server.)<br>
 <b>Phantomjs:</b> http://phantomjs.org/download.html
 
 <b>Usage:</b> ```cat SampleRules/rules.json | python pyuit.py```
