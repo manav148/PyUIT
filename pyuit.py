@@ -4,6 +4,8 @@ from Controllers import RunUITests
 import sys, json
 import time
 
+# Run tests using firefox or phantomjs
+run_using_browser = "firefox"
 retries = 0
 max_retries_if_phantomjs_fails = 4
 sleep_before_retrying = 3 # seconds
@@ -15,10 +17,7 @@ while(True):
         # Get rules from stdin in json format on server
         rules = json.loads(data)
         test = RunUITests(rules)
-        # Run tests using phantomjs 
-        # test.run_ui_tests("phantomjs")
-        # Run tests using firefox browser
-        test.run_ui_tests("firefox")
+        test.run_ui_tests(run_using_browser)
         break       
     except Exception, e:
         # If phantomjs crashes it throws an exception containing string "ghostdriver" we retry
