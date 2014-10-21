@@ -5,9 +5,10 @@ A UI Test Framework using Python, Selenium and Phantomjs/FireFox driver.(Alpha)
 
 Requirements:
 
-<b>Phantomjs:</b> http://phantomjs.org/download.html
+<b>Selenium:</b> ```pip install selenium``` 
 
-<b>Selenium:</b> ```pip install selenium```
+Optional: (Install only if we don't have GUI installed on server.)
+<b>Phantomjs:</b> http://phantomjs.org/download.html
 
 <b>Usage:</b> ```cat SampleRules/rules.json | python pyuit.py```
 
