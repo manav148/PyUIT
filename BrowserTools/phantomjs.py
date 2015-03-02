@@ -8,7 +8,7 @@ class PhantomJS(object):
 	"""
 
 	def __init__(self, ssl= True, url = None):
-		self.driver = webdriver.PhantomJS("phantomjs", service_args=['--ignore-ssl-errors=true']) if ssl else webdriver.PhantomJS('phantomjs')
+		self.driver = webdriver.PhantomJS("phantomjs", service_args=['--ignore-ssl-errors=true', '--ssl-protocol=any']) if ssl else webdriver.PhantomJS('phantomjs')
 		self.wait_after_getting_url = 60
 		if url:
 			self.url = url
